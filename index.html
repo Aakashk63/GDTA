@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDTA 2026 | Wi-Fi Portal</title>
-    <meta name="description" content="GDTA 2026 Official Wi-Fi access portal with dynamic load balancing for 900+ attendees at SNS Institutions, Coimbatore.">
+    <title>GDTA 2026 | Wi-Fi</title>
+    <meta name="description" content="GDTA 2026 Official Wi-Fi access portal - Connect to available networks at SNS Institutions, Coimbatore.">
     <meta name="theme-color" content="#e5a000">
 
     <!-- Favicon -->
@@ -13,8 +13,8 @@
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="GDTA 2026 | Wi-Fi Portal (Load Balanced)">
-    <meta property="og:description" content="Connect to official load-balanced Wi-Fi networks at GDTA 2026 - SNS Institutions, Coimbatore.">
+    <meta property="og:title" content="GDTA 2026 | Wi-Fi">
+    <meta property="og:description" content="Connect to official Wi-Fi networks at GDTA 2026 - SNS Institutions, Coimbatore.">
     <meta property="og:image" content="gdta-background.png">
 
     <!-- Preload Optimized Background Image -->
@@ -23,11 +23,11 @@
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         /* ==========================================
-           RESET & BASE
+           RESET
         =========================================== */
         * {
             margin: 0;
@@ -59,7 +59,7 @@
         }
 
         /* ==========================================
-           BACKGROUND BRIGHTNESS OVERLAY
+           BACKGROUND BRIGHTNESS
         =========================================== */
         .background-brightness {
             position: fixed;
@@ -75,7 +75,7 @@
         }
 
         /* ==========================================
-           PAGE LAYOUT
+           PAGE
         =========================================== */
         .page {
             position: relative;
@@ -92,7 +92,7 @@
         =========================================== */
         .header {
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 27px;
             color: #111111;
             text-shadow:
                 0 3px 6px rgba(0, 0, 0, 0.75),
@@ -147,9 +147,9 @@
            WIFI PANEL
         =========================================== */
         .wifi-panel {
-            width: min(650px, 100%);
-            padding: 28px;
-            background: rgba(255, 255, 255, 0.96);
+            width: min(620px, 100%);
+            padding: 29px;
+            background: rgba(255, 255, 255, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.95);
             border-radius: 23px;
             box-shadow:
@@ -166,14 +166,14 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            padding-bottom: 17px;
-            margin-bottom: 16px;
-            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 19px;
+            margin-bottom: 17px;
+            border-bottom: 1px solid #dedede;
         }
 
         .wifi-logo {
-            width: 54px;
-            height: 54px;
+            width: 58px;
+            height: 58px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
@@ -184,8 +184,8 @@
         }
 
         .wifi-logo svg {
-            width: 32px;
-            height: 32px;
+            width: 34px;
+            height: 34px;
             display: block;
         }
 
@@ -201,174 +201,48 @@
         .panel-description {
             margin-top: 4px;
             font-family: "Inter", sans-serif;
-            font-size: 11px;
-            font-weight: 500;
-            color: #666666;
-        }
-
-        /* ==========================================
-           LOAD BALANCER STATUS BANNER
-        =========================================== */
-        .balancer-banner {
-            background: linear-gradient(135deg, rgba(247, 189, 0, 0.09), rgba(247, 189, 0, 0.03));
-            border: 1px solid rgba(229, 160, 0, 0.28);
-            border-radius: 14px;
-            padding: 12px 14px;
-            margin-bottom: 16px;
-        }
-
-        .balancer-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .balancer-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .pulse-indicator {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: #16a34a;
-            box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 8px rgba(22, 163, 74, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
-            }
-        }
-
-        .balancer-title {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 12px;
-            font-weight: 700;
-            color: #111111;
-            letter-spacing: 0.2px;
-        }
-
-        .balancer-capacity {
-            font-family: "Inter", sans-serif;
             font-size: 10px;
-            font-weight: 700;
-            color: #926500;
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(229, 160, 0, 0.25);
-            padding: 3px 9px;
-            border-radius: 20px;
-            letter-spacing: 0.3px;
-        }
-
-        .balancer-desc {
-            margin-top: 6px;
-            font-size: 10.5px;
-            color: #555555;
-            line-height: 1.45;
+            font-weight: 500;
+            color: #777777;
         }
 
         /* ==========================================
-           FILTER / TAB BAR
-        =========================================== */
-        .filter-bar {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 14px;
-        }
-
-        .filter-tab {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 7px 14px;
-            border-radius: 20px;
-            border: 1px solid #dfdfdf;
-            background: #f7f7f7;
-            font-family: "Inter", sans-serif;
-            font-size: 10.5px;
-            font-weight: 700;
-            color: #444444;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .filter-tab:hover {
-            background: #ffffff;
-            border-color: #e5a000;
-            color: #111111;
-        }
-
-        .filter-tab.active {
-            background: #111111;
-            color: #f7bd00;
-            border-color: #111111;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        /* ==========================================
-           NETWORK LIST & CARDS
+           NETWORK LIST
         =========================================== */
         .network-list {
             display: flex;
             flex-direction: column;
-            gap: 11px;
+            gap: 10px;
         }
 
         .network-card {
-            position: relative;
             display: flex;
             align-items: center;
             gap: 13px;
             padding: 13px 14px;
-            min-height: 72px;
-            border-radius: 14px;
-            background: #f9f9f9;
+            min-height: 61px;
+            border-radius: 13px;
+            background: #f7f7f7;
             border: 1px solid #dfdfdf;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease,
+                background 0.2s ease;
+        }
+
+        /* First network highlighted - exactly like reference image */
+        .network-card:first-child {
+            border-color: #e6b200;
+            background: linear-gradient(90deg, #fffdf3, #f8f8f8);
+            box-shadow: 0 5px 18px rgba(218, 168, 0, 0.10);
         }
 
         .network-card:hover {
             transform: translateY(-2px);
             border-color: #e3ae00;
             background: #ffffff;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        /* Recommended Card Highlight */
-        .network-card.recommended {
-            border: 1.5px solid #e5a000;
-            background: linear-gradient(90deg, #fffdf2, #fbfbfb);
-            box-shadow: 0 6px 20px rgba(229, 160, 0, 0.14);
-        }
-
-        .rec-pill-container {
-            position: absolute;
-            top: -9px;
-            left: 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background: linear-gradient(135deg, #e5a000, #c88800);
-            color: #ffffff;
-            font-size: 8.5px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            padding: 2px 8px;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(200, 136, 0, 0.35);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
         }
 
         /* ==========================================
@@ -400,13 +274,6 @@
             min-width: 0;
         }
 
-        .network-name-row {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            flex-wrap: wrap;
-        }
-
         .network-name {
             font-family: "Space Grotesk", sans-serif;
             font-size: 15px;
@@ -418,70 +285,18 @@
             text-overflow: ellipsis;
         }
 
-        .band-badge {
-            font-family: "Inter", sans-serif;
-            font-size: 8.5px;
-            font-weight: 700;
-            color: #666666;
-            background: #ebebeb;
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-
-        .capacity-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            margin-top: 4px;
-            font-family: "Inter", sans-serif;
-            font-size: 9.5px;
-            font-weight: 600;
-            color: #15803d;
-            background: rgba(22, 163, 74, 0.08);
-            border: 1px solid rgba(22, 163, 74, 0.2);
-            padding: 2px 7px;
-            border-radius: 10px;
-        }
-
-        .capacity-indicator.fast {
-            color: #926500;
-            background: rgba(229, 160, 0, 0.1);
-            border-color: rgba(229, 160, 0, 0.25);
-        }
-
         .password-row {
             display: flex;
             align-items: center;
-            gap: 6px;
-            margin-top: 4px;
+            margin-top: 5px;
         }
 
-        .password-display {
-            font-family: "Inter", monospace;
+        .password {
+            font-family: "Inter", sans-serif;
             font-size: 11px;
             font-weight: 600;
             letter-spacing: 2px;
-            color: #666666;
-        }
-
-        .password-display.revealed {
-            letter-spacing: 0.5px;
-            color: #111111;
-        }
-
-        .btn-eye {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 2px;
-            display: flex;
-            align-items: center;
-            opacity: 0.6;
-            transition: opacity 0.2s;
-        }
-
-        .btn-eye:hover {
-            opacity: 1;
+            color: #777777;
         }
 
         /* ==========================================
@@ -495,7 +310,7 @@
         }
 
         .action-button {
-            padding: 8px 12px;
+            padding: 9px 13px;
             border-radius: 8px;
             border: 1px solid #dfab00;
             background: #ffffff;
@@ -503,10 +318,10 @@
             font-family: "Inter", sans-serif;
             font-size: 9px;
             font-weight: 800;
-            letter-spacing: 0.6px;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: 0.2s ease;
             white-space: nowrap;
         }
 
@@ -526,19 +341,21 @@
             border-color: #16a34a !important;
         }
 
+        /* QR button styling */
         .action-button.btn-qr {
-            border-color: #d1d5db;
-            color: #374151;
+            border-color: #dfdfdf;
+            color: #555555;
             background: #ffffff;
             display: inline-flex;
             align-items: center;
             gap: 4px;
+            padding: 9px 11px;
         }
 
         .action-button.btn-qr:hover {
             border-color: #111111;
             color: #111111;
-            background: #f3f4f6;
+            background: #f4f4f4;
         }
 
         /* ==========================================
@@ -546,10 +363,10 @@
         =========================================== */
         .footer {
             margin-top: 22px;
-            padding: 7px 16px;
+            padding: 7px 15px;
             border-radius: 30px;
-            background: rgba(255, 255, 255, 0.85);
-            color: #555555;
+            background: rgba(255, 255, 255, 0.78);
+            color: #666666;
             font-family: "Inter", sans-serif;
             font-size: 9px;
             font-weight: 600;
@@ -570,7 +387,7 @@
             left: 50%;
             bottom: 28px;
             transform: translate(-50%, 20px);
-            padding: 11px 22px;
+            padding: 11px 21px;
             border-radius: 30px;
             background: #111111;
             color: #ffffff;
@@ -579,9 +396,8 @@
             font-weight: 700;
             opacity: 0;
             pointer-events: none;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: 0.3s ease;
             z-index: 1000;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         }
 
         .toast.show {
@@ -709,30 +525,77 @@
         /* ==========================================
            RESPONSIVE
         =========================================== */
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             .page {
-                padding: 24px 12px;
+                padding: 30px 15px;
             }
 
             .wifi-panel {
-                padding: 18px 14px;
-                border-radius: 18px;
+                padding: 22px;
             }
 
-            .balancer-top {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 6px;
+            .main-title {
+                font-size: 54px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            body {
+                background-attachment: scroll;
+                background-position: center center;
+            }
+
+            .page {
+                padding: 25px 12px;
+            }
+
+            .brand {
+                font-size: 14px;
+                letter-spacing: 3px;
+            }
+
+            .main-title {
+                font-size: 46px;
+                letter-spacing: -2px;
+            }
+
+            .subtitle {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
+
+            .wifi-panel {
+                padding: 18px;
+                border-radius: 20px;
+            }
+
+            .wifi-logo {
+                width: 50px;
+                height: 50px;
+                border-radius: 13px;
+            }
+
+            .wifi-logo svg {
+                width: 29px;
+                height: 29px;
+            }
+
+            .panel-title {
+                font-size: 18px;
+            }
+
+            .panel-description {
+                font-size: 9px;
             }
 
             .network-card {
-                padding: 12px 10px;
-                gap: 10px;
+                gap: 9px;
+                padding: 11px;
             }
 
             .signal-box {
-                width: 40px;
-                height: 40px;
+                width: 41px;
+                height: 41px;
             }
 
             .signal-svg {
@@ -741,24 +604,45 @@
             }
 
             .network-name {
-                font-size: 13.5px;
+                font-size: 13px;
             }
 
-            .card-actions {
-                flex-direction: column;
-                gap: 5px;
+            .password {
+                font-size: 9px;
+                letter-spacing: 1.5px;
             }
 
             .action-button {
-                padding: 6px 8px;
+                padding: 8px 9px;
                 font-size: 8px;
-                width: 100%;
-                text-align: center;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .main-title {
+                font-size: 40px;
             }
 
-            .main-title {
-                font-size: 46px;
-                letter-spacing: -2px;
+            .wifi-panel {
+                padding: 15px;
+            }
+
+            .network-card {
+                gap: 7px;
+            }
+
+            .signal-box {
+                width: 37px;
+                height: 37px;
+            }
+
+            .network-name {
+                font-size: 12px;
+            }
+
+            .action-button {
+                padding: 7px 8px;
+                font-size: 7px;
             }
         }
     </style>
@@ -809,40 +693,9 @@
                         Connect to Wi-Fi
                     </div>
                     <div class="panel-description">
-                        Select an available network or use your recommended access point.
+                        Select the available network and connect.
                     </div>
                 </div>
-            </div>
-
-            <!-- ==========================================
-                 DYNAMIC LOAD BALANCER BANNER (900+ USERS)
-            =========================================== -->
-            <div class="balancer-banner">
-                <div class="balancer-top">
-                    <div class="balancer-pill">
-                        <span class="pulse-indicator"></span>
-                        <span class="balancer-title">High-Density Load Balancer Active</span>
-                    </div>
-                    <span class="balancer-capacity">Capacity: 1,200 (900+ Attendees)</span>
-                </div>
-                <div class="balancer-desc">
-                    Traffic is automatically balanced across 4 high-speed campus access points to guarantee zero latency and prevent connection dropouts.
-                </div>
-            </div>
-
-            <!-- ==========================================
-                 FILTER SELECTOR
-            =========================================== -->
-            <div class="filter-bar">
-                <button class="filter-tab active" id="tabRecommended" onclick="setFilter('recommended')">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
-                    </svg>
-                    Recommended for You
-                </button>
-                <button class="filter-tab" id="tabAll" onclick="setFilter('all')">
-                    All Access Points (4)
-                </button>
             </div>
 
             <!-- ==========================================
@@ -864,7 +717,7 @@
     <!-- ==========================================
          TOAST NOTIFICATION
     =========================================== -->
-    <div class="toast" id="toast">Password copied!</div>
+    <div class="toast" id="toast">Wi-Fi password copied</div>
 
     <!-- ==========================================
          QR INSTANT CONNECT MODAL
@@ -889,231 +742,106 @@
 
     <script>
         /* ==========================================
-           WIFI NETWORK DATA (LOAD BALANCED ACROSS 4 APs)
-           Total Concurrent Capacity: 1,200 devices
+           WIFI NETWORK DATA
         =========================================== */
         const networks = [
             {
-                id: "gdta_2026",
                 name: "GDTA_2026",
                 password: "GDTA@2026",
                 signal: 4,
-                band: "5 GHz • AP-01 Main Hall",
-                loadLabel: "Optimal Load",
-                loadClass: "optimal",
-                connected: "214 / 300 Devices",
                 qrFile: "qr-gdta-2026.svg"
             },
             {
-                id: "gdta_guest",
                 name: "GDTA_GUEST",
                 password: "GDTA@Guest",
                 signal: 4,
-                band: "5 GHz • AP-02 Fast Roaming",
-                loadLabel: "Optimal Load",
-                loadClass: "optimal",
-                connected: "192 / 300 Devices",
                 qrFile: "qr-gdta-guest.svg"
             },
             {
-                id: "sns_gdta",
                 name: "SNS_GDTA",
                 password: "SNS@2026",
                 signal: 3,
-                band: "Dual-Band • AP-03 Campus Backbone",
-                loadLabel: "Optimal Load",
-                loadClass: "optimal",
-                connected: "208 / 300 Devices",
                 qrFile: "qr-sns-gdta.svg"
             },
             {
-                id: "gdta_media",
                 name: "GDTA_MEDIA",
                 password: "Media@2026",
                 signal: 3,
-                band: "5 GHz • AP-04 High Throughput",
-                loadLabel: "Fast Lane",
-                loadClass: "fast",
-                connected: "46 / 100 Devices",
                 qrFile: "qr-gdta-media.svg"
             }
         ];
 
         /* ==========================================
-           DETERMINISTIC LOAD BALANCER ALGORITHM
-           Distributes 900+ users evenly across 4 APs
+           CREATE NETWORK CARDS
         =========================================== */
-        function getDeviceId() {
-            let id = null;
-            try {
-                id = localStorage.getItem("gdta_device_id");
-            } catch (e) {}
+        const networkList = document.getElementById("networkList");
 
-            if (!id) {
-                id = "dev_" + Math.random().toString(36).substring(2, 9) + Date.now().toString(36);
-                try {
-                    localStorage.setItem("gdta_device_id", id);
-                } catch (e) {}
-            }
-            return id;
-        }
+        networks.forEach((network, index) => {
+            const card = document.createElement("div");
+            card.className = "network-card";
 
-        function getAssignedIndex(devId, count) {
-            let hash = 0;
-            for (let i = 0; i < devId.length; i++) {
-                hash = ((hash << 5) - hash) + devId.charCodeAt(i);
-                hash |= 0;
-            }
-            return Math.abs(hash) % count;
-        }
+            card.innerHTML = `
+                <div class="signal-box">
+                    <svg class="signal-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Wi-Fi signal">
+                        <!-- Signal Bar 1 -->
+                        <rect x="3" y="27" width="6" height="9" rx="3" fill="#E5AE00"/>
+                        <!-- Signal Bar 2 -->
+                        <rect x="12" y="21" width="6" height="15" rx="3" fill="#E5AE00"/>
+                        <!-- Signal Bar 3 -->
+                        <rect x="21" y="14" width="6" height="22" rx="3" fill="${network.signal >= 3 ? "#E5AE00" : "#D8D8D8"}"/>
+                        <!-- Signal Bar 4 -->
+                        <rect x="30" y="6" width="6" height="30" rx="3" fill="${network.signal >= 4 ? "#E5AE00" : "#D8D8D8"}"/>
+                    </svg>
+                </div>
 
-        const deviceId = getDeviceId();
-        const assignedIndex = getAssignedIndex(deviceId, networks.length);
+                <div class="network-details">
+                    <div class="network-name">
+                        ${network.name}
+                    </div>
 
-        let currentFilter = "recommended";
-        const revealedPasswords = {};
+                    <div class="password-row">
+                        <span class="password">
+                            ${"•".repeat(Math.min(network.password.length, 11))}
+                        </span>
+                    </div>
+                </div>
 
-        /* ==========================================
-           RENDER NETWORK CARDS
-        =========================================== */
-        function renderNetworks() {
-            const networkList = document.getElementById("networkList");
-            networkList.innerHTML = "";
-
-            let displayList = [];
-
-            if (currentFilter === "recommended") {
-                // In recommended mode, place the user's assigned AP first, followed by others
-                const assigned = networks[assignedIndex];
-                const others = networks.filter((_, idx) => idx !== assignedIndex);
-                displayList = [
-                    { ...assigned, originalIndex: assignedIndex, isRecommended: true },
-                    ...others.map((item) => ({
-                        ...item,
-                        originalIndex: networks.findIndex(n => n.id === item.id),
-                        isRecommended: false
-                    }))
-                ];
-            } else {
-                // Show all networks in standard sequence
-                displayList = networks.map((item, idx) => ({
-                    ...item,
-                    originalIndex: idx,
-                    isRecommended: idx === assignedIndex
-                }));
-            }
-
-            displayList.forEach((network) => {
-                const card = document.createElement("div");
-                card.className = "network-card" + (network.isRecommended ? " recommended" : "");
-
-                const isRevealed = revealedPasswords[network.originalIndex];
-                const displayPassword = isRevealed ? network.password : "•".repeat(Math.min(network.password.length, 11));
-
-                card.innerHTML = `
-                    ${network.isRecommended ? `
-                        <div class="rec-pill-container">
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
-                            </svg>
-                            Recommended for your device
-                        </div>
-                    ` : ""}
-
-                    <div class="signal-box">
-                        <svg class="signal-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Signal">
-                            <rect x="3" y="27" width="6" height="9" rx="3" fill="#E5AE00"/>
-                            <rect x="12" y="21" width="6" height="15" rx="3" fill="#E5AE00"/>
-                            <rect x="21" y="14" width="6" height="22" rx="3" fill="${network.signal >= 3 ? "#E5AE00" : "#D8D8D8"}"/>
-                            <rect x="30" y="6" width="6" height="30" rx="3" fill="${network.signal >= 4 ? "#E5AE00" : "#D8D8D8"}"/>
+                <div class="card-actions">
+                    <button
+                        class="action-button"
+                        onclick="copyPassword(${index}, this)"
+                        aria-label="Copy password for ${network.name}"
+                    >
+                        Copy Pass
+                    </button>
+                    <button
+                        class="action-button btn-qr"
+                        onclick="openQrModal(${index})"
+                        aria-label="Show QR code for ${network.name}"
+                        title="Instant Camera Connect"
+                    >
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
                         </svg>
-                    </div>
+                        QR
+                    </button>
+                </div>
+            `;
 
-                    <div class="network-details">
-                        <div class="network-name-row">
-                            <span class="network-name">${network.name}</span>
-                            <span class="band-badge">${network.band}</span>
-                        </div>
-
-                        <div class="capacity-indicator ${network.loadClass}">
-                            <span>●</span>
-                            <span>${network.loadLabel} • ${network.connected}</span>
-                        </div>
-
-                        <div class="password-row">
-                            <span class="password-display ${isRevealed ? "revealed" : ""}" id="pass-txt-${network.originalIndex}">
-                                ${displayPassword}
-                            </span>
-                            <button
-                                class="btn-eye"
-                                onclick="togglePassword(${network.originalIndex})"
-                                aria-label="Show password"
-                                title="Toggle show/hide password"
-                            >
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="card-actions">
-                        <button
-                            class="action-button"
-                            onclick="copyPassword(${network.originalIndex}, this)"
-                            aria-label="Copy password for ${network.name}"
-                        >
-                            Copy Pass
-                        </button>
-                        <button
-                            class="action-button btn-qr"
-                            onclick="openQrModal(${network.originalIndex})"
-                            aria-label="Show QR code for ${network.name}"
-                            title="Instant Camera Connect"
-                        >
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                            QR
-                        </button>
-                    </div>
-                `;
-
-                networkList.appendChild(card);
-            });
-        }
+            networkList.appendChild(card);
+        });
 
         /* ==========================================
-           TAB SWITCHING
-        =========================================== */
-        function setFilter(filter) {
-            currentFilter = filter;
-            document.getElementById("tabRecommended").classList.toggle("active", filter === "recommended");
-            document.getElementById("tabAll").classList.toggle("active", filter === "all");
-            renderNetworks();
-        }
-
-        /* ==========================================
-           TOGGLE PASSWORD REVEAL
-        =========================================== */
-        function togglePassword(index) {
-            revealedPasswords[index] = !revealedPasswords[index];
-            renderNetworks();
-        }
-
-        /* ==========================================
-           CLIPBOARD COPY WITH FALLBACK
+           COPY PASSWORD WITH FALLBACK
         =========================================== */
         function copyPassword(index, btn) {
-            const network = networks[index];
-            const password = network.password;
+            const password = networks[index].password;
 
             function onSuccess() {
-                showToast(`Wi-Fi password for ${network.name} copied!`);
+                showToast("Wi-Fi password copied");
                 if (btn) {
                     const originalText = btn.innerHTML;
                     btn.textContent = "Copied!";
@@ -1160,7 +888,7 @@
         }
 
         /* ==========================================
-           TOAST NOTIFICATION
+           TOAST
         =========================================== */
         function showToast(message) {
             const toast = document.getElementById("toast");
@@ -1169,7 +897,7 @@
 
             setTimeout(() => {
                 toast.classList.remove("show");
-            }, 2200);
+            }, 2000);
         }
 
         /* ==========================================
@@ -1193,7 +921,6 @@
         }
 
         function copyFromModal() {
-            const net = networks[activeModalIndex];
             const btn = document.getElementById("modalCopyBtn");
             copyPassword(activeModalIndex, btn);
         }
@@ -1212,10 +939,8 @@
                 navigator.serviceWorker.register("./sw.js").catch(() => {});
             });
         }
-
-        // Initialize display
-        renderNetworks();
     </script>
 
 </body>
+
 </html>
