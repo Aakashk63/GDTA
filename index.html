@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>GDTA 2026 | Wi-Fi Portal</title>
+    <meta name="description" content="GDTA 2026 Official Wi-Fi access portal - Connect to available event networks at SNS Institutions, Coimbatore.">
+    <meta name="theme-color" content="#e5a000">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GDTA 2026 | Wi-Fi Access Portal">
+    <meta property="og:description" content="Connect to official Wi-Fi networks at GDTA 2026 - SNS Institutions, Coimbatore.">
+    <meta property="og:image" content="gdta-background.png">
+
+
+    <!-- ==========================================
+         TYPOGRAPHY
+    =========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* ==========================================
+           RESET
+        =========================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family: "Inter", sans-serif;
+
+            color: #111111;
+
+            /*
+            ==========================================
+            GDTA BACKGROUND IMAGE
+            ==========================================
+            */
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255, 255, 255, 0.10),
+                    rgba(255, 255, 255, 0.10)
+                ),
+
+                url("gdta-background.png");
+
+            background-size: cover;
+
+            background-position: center center;
+
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+
+            overflow-x: hidden;
+        }
+
+
+        /* ==========================================
+           BACKGROUND BRIGHTNESS
+        =========================================== */
+
+        .background-brightness {
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0.10),
+                    rgba(255,255,255,0.02),
+                    rgba(255,255,255,0.12)
+                );
+
+            pointer-events: none;
+
+            z-index: 0;
+        }
+
+
+        /* ==========================================
+           PAGE
+        =========================================== */
+
+        .page {
+
+            position: relative;
+
+            z-index: 1;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            padding: 42px 20px 30px;
+        }
+
+
+        /* ==========================================
+           HEADER
+        =========================================== */
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 27px;
+
+            color: #111111;
+
+            /*
+            Strong overall text shadow
+            */
+
+            text-shadow:
+
+                0 3px 6px rgba(0, 0, 0, 0.75),
+
+                0 6px 16px rgba(0, 0, 0, 0.45);
+        }
+
+
+        /* ==========================================
+           GDTA 2026
+        =========================================== */
+
+        .brand {
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            text-shadow:
+
+                0 2px 4px rgba(0, 0, 0, 0.85),
+
+                0 4px 10px rgba(0, 0, 0, 0.55);
+        }
+
+
+        .brand span {
+
+            color: #e5a900;
+        }
+
+
+        /* ==========================================
+           WI-FI MAIN TITLE
+        =========================================== */
+
+        .main-title {
+
+            margin-top: 2px;
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                clamp(48px, 6vw, 76px);
+
+            line-height:
+                0.95;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                -4px;
+
+            /*
+            Strong readable shadow
+            */
+
+            text-shadow:
+
+                0 3px 5px rgba(0, 0, 0, 0.9),
+
+                0 7px 18px rgba(0, 0, 0, 0.65),
+
+                0 0 25px rgba(255, 255, 255, 0.18);
+        }
+
+
+        .main-title span {
+
+            color:
+                #e5a900;
+        }
+
+
+        /* ==========================================
+           WELCOME TO GDTA 2026
+        =========================================== */
+
+        .subtitle {
+
+            margin-top:
+                11px;
+
+            font-family:
+                "Inter",
+                sans-serif;
+
+            font-size:
+                10px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                3px;
+
+            text-transform:
+                uppercase;
+
+            text-shadow:
+
+                0 2px 4px rgba(0, 0, 0, 0.9),
+
+                0 4px 9px rgba(0, 0, 0, 0.6);
+        }
+
+
+        /* ==========================================
+           WIFI PANEL
+        =========================================== */
+
+        .wifi-panel {
+
+            width:
+                min(620px, 100%);
+
+            padding:
+                29px;
+
+            background:
+                rgba(255, 255, 255, 0.95);
+
+            border:
+                1px solid rgba(255,255,255,0.95);
+
+            border-radius:
+                23px;
+
+            box-shadow:
+
+                0 25px 70px
+                rgba(0,0,0,0.28),
+
+                0 5px 20px
+                rgba(0,0,0,0.12);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+        }
+
+
+        /* ==========================================
+           PANEL HEADER
+        =========================================== */
+
+        .panel-header {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            padding-bottom:
+                19px;
+
+            margin-bottom:
+                17px;
+
+            border-bottom:
+                1px solid #dedede;
+        }
+
+
+        /* ==========================================
+           SVG WIFI LOGO
+        =========================================== */
+
+        .wifi-logo {
+
+            width:
+                58px;
+
+            height:
+                58px;
+
+            flex-shrink:
+                0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                15px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f7bd00,
+                    #e5a000
+                );
+
+            box-shadow:
+                0 8px 20px
+                rgba(225,160,0,0.25);
+        }
+
+
+        .wifi-logo svg {
+
+            width:
+                34px;
+
+            height:
+                34px;
+
+            display:
+                block;
+        }
+
+
+        /* ==========================================
+           PANEL TITLE
+        =========================================== */
+
+        .panel-title {
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                21px;
+
+            font-weight:
+                700;
+
+            line-height:
+                1.1;
+
+            letter-spacing:
+                -0.5px;
+
+            color:
+                #111111;
+        }
+
+
+        .panel-description {
+
+            margin-top:
+                4px;
+
+            font-family:
+                "Inter",
+                sans-serif;
+
+            font-size:
+                10px;
+
+            font-weight:
+                500;
+
+            color:
+                #777777;
+        }
+
+
+        /* ==========================================
+           NETWORK LIST
+        =========================================== */
+
+        .network-list {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                10px;
+        }
+
+
+        /* ==========================================
+           NETWORK CARD
+        =========================================== */
+
+        .network-card {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                13px;
+
+            padding:
+                13px 14px;
+
+            min-height:
+                61px;
+
+            border-radius:
+                13px;
+
+            background:
+                #f7f7f7;
+
+            border:
+                1px solid #dfdfdf;
+
+            transition:
+
+                transform 0.2s ease,
+
+                box-shadow 0.2s ease,
+
+                border-color 0.2s ease,
+
+                background 0.2s ease;
+        }
+
+
+        /* First network highlighted */
+
+        .network-card:first-child {
+
+            border-color:
+                #e6b200;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #fffdf3,
+                    #f8f8f8
+                );
+
+            box-shadow:
+                0 5px 18px
+                rgba(218,168,0,0.10);
+        }
+
+
+        .network-card:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                #e3ae00;
+
+            background:
+                #ffffff;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0,0,0,0.09);
+        }
+
+
+        /* ==========================================
+           SIGNAL CONTAINER
+        =========================================== */
+
+        .signal-box {
+
+            width:
+                47px;
+
+            height:
+                47px;
+
+            flex-shrink:
+                0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                12px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #dedede;
+        }
+
+
+        /* ==========================================
+           SIGNAL SVG
+        =========================================== */
+
+        .signal-svg {
+
+            width:
+                29px;
+
+            height:
+                29px;
+
+            display:
+                block;
+        }
+
+
+        /* ==========================================
+           NETWORK DETAILS
+        =========================================== */
+
+        .network-details {
+
+            flex:
+                1;
+
+            min-width:
+                0;
+        }
+
+
+        .network-name {
+
+            font-family:
+                "Space Grotesk",
+                sans-serif;
+
+            font-size:
+                15px;
+
+            font-weight:
+                700;
+
+            line-height:
+                1.2;
+
+            color:
+                #111111;
+
+            white-space:
+                nowrap;
+
+            overflow:
+                hidden;
+
+            text-overflow:
+                ellipsis;
+        }
+
+
+        .password-row {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            margin-top:
+                5px;
+        }
+
+
+        .password {
+
+            font-family:
+                "Inter",
+                sans-serif;
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+
+            letter-spacing:
+                2px;
+
+            color:
+                #777777;
+        }
+
+
+        /* ==========================================
+           COPY BUTTON
+        =========================================== */
+
+        .action-button {
+
+            flex-shrink:
+                0;
+
+            padding:
+                9px 13px;
+
+            border-radius:
+                8px;
+
+            border:
+                1px solid #dfab00;
+
+            background:
+                #ffffff;
+
+            color:
+                #ae8000;
+
+            font-family:
+                "Inter",
+                sans-serif;
+
+            font-size:
+                9px;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                0.8px;
+
+            text-transform:
+                uppercase;
+
+            cursor:
+                pointer;
+
+            transition:
+                0.2s ease;
+        }
+
+
+        .action-button:hover {
+
+            background:
+                #efb500;
+
+            color:
+                #111111;
+
+            border-color:
+                #efb500;
+        }
+
+
+        .action-button:active {
+
+            transform:
+                scale(0.95);
+        }
+
+        .action-button.copied {
+
+            background:
+                #16a34a;
+
+            color:
+                #ffffff;
+
+            border-color:
+                #16a34a;
+        }
+
+
+        /* ==========================================
+           FOOTER
+        =========================================== */
+
+        .footer {
+
+            margin-top:
+                22px;
+
+            padding:
+                7px 15px;
+
+            border-radius:
+                30px;
+
+            background:
+                rgba(255,255,255,0.78);
+
+            color:
+                #666666;
+
+            font-family:
+                "Inter",
+                sans-serif;
+
+            font-size:
+                9px;
+
+            font-weight:
+                600;
+
+            letter-spacing:
+                1px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.08);
+        }
+
+
+        .footer strong {
+
+            color:
+                #a87900;
+
+            font-weight:
+                800;
+        }
+
+
+        /* ==========================================
+           TOAST
+        =========================================== */
+
+        .toast {
+
+            position:
+                fixed;
+
+            left:
+                50%;
+
+            bottom:
+                28px;
+
+            transform:
+                translate(-50%, 20px);
+
+            padding:
+                11px 21px;
+
+            border-radius:
+                30px;
+
+            background:
+                #111111;
+
+            color:
+                #ffffff;
+
+            font-family:
+                "Inter",
+                sans-serif;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+
+            transition:
+                0.3s ease;
+
+            z-index:
+                100;
+        }
+
+
+        .toast.show {
+
+            opacity:
+                1;
+
+            transform:
+                translate(-50%, 0);
+        }
+
+
+        /* ==========================================
+           TABLET
+        =========================================== */
+
+        @media (max-width: 700px) {
+
+            .page {
+
+                padding:
+                    30px 15px;
+            }
+
+
+            .wifi-panel {
+
+                padding:
+                    22px;
+            }
+
+
+            .main-title {
+
+                font-size:
+                    54px;
+            }
+
+        }
+
+
+        /* ==========================================
+           MOBILE
+        =========================================== */
+
+        @media (max-width: 500px) {
+
+            body {
+
+                background-attachment:
+                    scroll;
+
+                background-position:
+                    center center;
+            }
+
+
+            .page {
+
+                padding:
+                    25px 12px;
+            }
+
+
+            .brand {
+
+                font-size:
+                    14px;
+
+                letter-spacing:
+                    3px;
+            }
+
+
+            .main-title {
+
+                font-size:
+                    46px;
+
+                letter-spacing:
+                    -2px;
+            }
+
+
+            .subtitle {
+
+                font-size:
+                    8px;
+
+                letter-spacing:
+                    2px;
+            }
+
+
+            .wifi-panel {
+
+                padding:
+                    18px;
+
+                border-radius:
+                    20px;
+            }
+
+
+            .wifi-logo {
+
+                width:
+                    50px;
+
+                height:
+                    50px;
+
+                border-radius:
+                    13px;
+            }
+
+
+            .wifi-logo svg {
+
+                width:
+                    29px;
+
+                height:
+                    29px;
+            }
+
+
+            .panel-title {
+
+                font-size:
+                    18px;
+            }
+
+
+            .panel-description {
+
+                font-size:
+                    9px;
+            }
+
+
+            .network-card {
+
+                gap:
+                    9px;
+
+                padding:
+                    11px;
+            }
+
+
+            .signal-box {
+
+                width:
+                    41px;
+
+                height:
+                    41px;
+            }
+
+
+            .signal-svg {
+
+                width:
+                    25px;
+
+                height:
+                    25px;
+            }
+
+
+            .network-name {
+
+                font-size:
+                    13px;
+            }
+
+
+            .password {
+
+                font-size:
+                    9px;
+
+                letter-spacing:
+                    1.5px;
+            }
+
+
+            .action-button {
+
+                padding:
+                    8px 9px;
+
+                font-size:
+                    8px;
+            }
+
+        }
+
+
+        /* ==========================================
+           SMALL MOBILE
+        =========================================== */
+
+        @media (max-width: 360px) {
+
+            .main-title {
+
+                font-size:
+                    40px;
+            }
+
+
+            .wifi-panel {
+
+                padding:
+                    15px;
+            }
+
+
+            .network-card {
+
+                gap:
+                    7px;
+            }
+
+
+            .signal-box {
+
+                width:
+                    37px;
+
+                height:
+                    37px;
+            }
+
+
+            .network-name {
+
+                font-size:
+                    12px;
+            }
+
+
+            .action-button {
+
+                padding:
+                    7px 8px;
+
+                font-size:
+                    7px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         BRIGHT BACKGROUND
+    =========================================== -->
+
+    <div class="background-brightness"></div>
+
+
+    <main class="page">
+
+
+        <!-- ==========================================
+             HEADER
+        =========================================== -->
+
+        <header class="header">
+
+
+            <!-- GDTA 2026 -->
+
+            <div class="brand">
+
+                <span>GDTA</span> 2026
+
+            </div>
+
+
+            <!-- Wi-Fi -->
+
+            <h1 class="main-title">
+
+                Wi<span>-</span>Fi
+
+            </h1>
+
+
+            <!-- Welcome -->
+
+            <div class="subtitle">
+
+                Welcome to GDTA 2026
+
+            </div>
+
+
+        </header>
+
+
+        <!-- ==========================================
+             WIFI PANEL
+        =========================================== -->
+
+        <section class="wifi-panel">
+
+
+            <!-- ==========================================
+                 PANEL HEADER
+            =========================================== -->
+
+            <div class="panel-header">
+
+
+                <!-- SVG WIFI LOGO -->
+
+                <div class="wifi-logo">
+
+                    <svg
+                        viewBox="0 0 64 64"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Wi-Fi"
+                    >
+
+                        <!-- Outer Wi-Fi Arc -->
+
+                        <path
+                            d="M10 24C22 12 42 12 54 24"
+                            stroke="#111111"
+                            stroke-width="5"
+                            stroke-linecap="round"
+                        />
+
+
+                        <!-- Middle Wi-Fi Arc -->
+
+                        <path
+                            d="M17 32C25 24 39 24 47 32"
+                            stroke="#111111"
+                            stroke-width="5"
+                            stroke-linecap="round"
+                        />
+
+
+                        <!-- Inner Wi-Fi Arc -->
+
+                        <path
+                            d="M25 40C29 36 35 36 39 40"
+                            stroke="#111111"
+                            stroke-width="5"
+                            stroke-linecap="round"
+                        />
+
+
+                        <!-- Wi-Fi Center -->
+
+                        <circle
+                            cx="32"
+                            cy="48"
+                            r="3.5"
+                            fill="#111111"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <!-- PANEL TEXT -->
+
+                <div>
+
+                    <div class="panel-title">
+
+                        Connect to Wi-Fi
+
+                    </div>
+
+
+                    <div class="panel-description">
+
+                        Select the available network and connect.
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ==========================================
+                 NETWORK LIST
+            =========================================== -->
+
+            <div
+                class="network-list"
+                id="networkList"
+            ></div>
+
+
+        </section>
+
+
+        <!-- ==========================================
+             FOOTER
+        =========================================== -->
+
+        <footer class="footer">
+
+            <strong>
+                GDTA 2026
+            </strong>
+
+            &nbsp;•&nbsp;
+
+            SNS Institutions, Coimbatore
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- ==========================================
+         TOAST
+    =========================================== -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+        Password copied!
+    </div>
+
+
+
+    <script>
+
+
+        /* ==========================================
+           WIFI NETWORK DATA
+
+           signal:
+           3 = three bars
+           4 = four bars
+        =========================================== */
+
+        const networks = [
+
+            {
+                name: "GDTA_2026",
+                password: "GDTA@2026",
+                signal: 4
+            },
+
+
+            {
+                name: "GDTA_GUEST",
+                password: "GDTA@Guest",
+                signal: 4
+            },
+
+
+            {
+                name: "SNS_GDTA",
+                password: "SNS@2026",
+                signal: 3
+            },
+
+
+            {
+                name: "GDTA_MEDIA",
+                password: "Media@2026",
+                signal: 3
+            }
+
+        ];
+
+
+        /* ==========================================
+           NETWORK LIST
+        =========================================== */
+
+        const networkList =
+            document.getElementById(
+                "networkList"
+            );
+
+
+        /* ==========================================
+           CREATE NETWORK CARDS
+        =========================================== */
+
+        networks.forEach(
+            (network, index) => {
+
+
+                const card =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                card.className =
+                    "network-card";
+
+
+                /*
+                ======================================
+                SVG SIGNAL ICON
+                ======================================
+                */
+
+                card.innerHTML = `
+
+                    <div class="signal-box">
+
+                        <svg
+                            class="signal-svg"
+                            viewBox="0 0 40 40"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-label="Wi-Fi signal"
+                        >
+
+                            <!-- Signal Bar 1 -->
+
+                            <rect
+                                x="3"
+                                y="27"
+                                width="6"
+                                height="9"
+                                rx="3"
+                                fill="#E5AE00"
+                            />
+
+
+                            <!-- Signal Bar 2 -->
+
+                            <rect
+                                x="12"
+                                y="21"
+                                width="6"
+                                height="15"
+                                rx="3"
+                                fill="#E5AE00"
+                            />
+
+
+                            <!-- Signal Bar 3 -->
+
+                            <rect
+                                x="21"
+                                y="14"
+                                width="6"
+                                height="22"
+                                rx="3"
+                                fill="${
+                                    network.signal >= 3
+                                    ? "#E5AE00"
+                                    : "#D8D8D8"
+                                }"
+                            />
+
+
+                            <!-- Signal Bar 4 -->
+
+                            <rect
+                                x="30"
+                                y="6"
+                                width="6"
+                                height="30"
+                                rx="3"
+                                fill="${
+                                    network.signal >= 4
+                                    ? "#E5AE00"
+                                    : "#D8D8D8"
+                                }"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <!-- NETWORK DETAILS -->
+
+                    <div class="network-details">
+
+                        <div class="network-name">
+
+                            ${network.name}
+
+                        </div>
+
+
+                        <div class="password-row">
+
+                            <span class="password">
+
+                                ${"•".repeat(
+                                    Math.min(
+                                        network.password.length,
+                                        11
+                                    )
+                                )}
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COPY BUTTON -->
+
+                    <button
+                        class="action-button"
+                        onclick="copyPassword(${index}, this)"
+                        aria-label="Copy password for ${network.name}"
+                    >
+
+                        Copy Pass
+
+                    </button>
+
+                `;
+
+
+                networkList.appendChild(
+                    card
+                );
+
+            }
+        );
+
+
+        /* ==========================================
+           COPY PASSWORD
+        =========================================== */
+
+        function copyPassword(index, btn) {
+
+            const network =
+                networks[index];
+
+            const password =
+                network.password;
+
+            function onSuccess() {
+                showToast(
+                    `Wi-Fi password for ${network.name} copied!`
+                );
+
+                if (btn) {
+                    const originalText = btn.textContent;
+                    btn.textContent = "Copied!";
+                    btn.classList.add("copied");
+
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.classList.remove("copied");
+                    }, 1500);
+                }
+            }
+
+            if (navigator.clipboard && window.isSecureContext) {
+
+                navigator.clipboard
+                    .writeText(password)
+                    .then(onSuccess)
+                    .catch(() => fallbackCopy(password, onSuccess));
+
+            } else {
+
+                fallbackCopy(password, onSuccess);
+
+            }
+
+        }
+
+
+        function fallbackCopy(text, cb) {
+
+            try {
+
+                const textarea =
+                    document.createElement("textarea");
+
+                textarea.value =
+                    text;
+
+                textarea.style.position =
+                    "fixed";
+
+                textarea.style.left =
+                    "-9999px";
+
+                textarea.style.top =
+                    "-9999px";
+
+                textarea.setAttribute("readonly", "");
+
+                document.body.appendChild(textarea);
+
+                textarea.focus();
+
+                textarea.select();
+
+                const successful =
+                    document.execCommand("copy");
+
+                document.body.removeChild(textarea);
+
+                if (successful && cb) {
+
+                    cb();
+
+                } else {
+
+                    showToast("Unable to copy password");
+
+                }
+
+            } catch (err) {
+
+                showToast("Unable to copy password");
+
+            }
+
+        }
+
+
+        /* ==========================================
+           TOAST
+        =========================================== */
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById(
+                    "toast"
+                );
+
+
+            toast.textContent =
+                message;
+
+
+            toast.classList.add(
+                "show"
+            );
+
+
+            setTimeout(() => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            }, 2000);
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
