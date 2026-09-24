@@ -55,11 +55,13 @@ Click the button below to deploy this project directly to your Vercel account:
 ```
 ├── .gitignore             # Git ignore file for Vercel cache and OS files
 ├── favicon.svg            # Custom gold GDTA Wi-Fi favicon
-├── gdta-background.png    # Original background artwork (fallback)
-├── gdta-background.webp   # Optimized WebP background (112 KB - 81% smaller)
-├── index.html             # Main entry point with load balancer & UI
-├── main.html              # Fallback redirect to index.html
-├── qr-gdta-2026.svg       # Wi-Fi QR code for GDTA_2026
+├── gdta-background.png         # Desktop background artwork (fallback)
+├── gdta-background.webp        # Desktop WebP background (112 KB - 81% smaller)
+├── gdta-background-mobile.jpg  # Mobile portrait artwork (fallback)
+├── gdta-background-mobile.webp # Mobile WebP portrait background (optimized)
+├── index.html                  # Main entry point with Wi-Fi portal UI
+├── main.html                   # Wi-Fi portal page
+├── qr-gdta-2026.svg            # Wi-Fi QR code for GDTA_2026
 ├── qr-gdta-guest.svg      # Wi-Fi QR code for GDTA_GUEST
 ├── qr-gdta-media.svg      # Wi-Fi QR code for GDTA_MEDIA
 ├── qr-sns-gdta.svg        # Wi-Fi QR code for SNS_GDTA

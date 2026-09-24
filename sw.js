@@ -10,6 +10,8 @@ const ASSETS_TO_CACHE = [
   './favicon.svg',
   './gdta-background.webp',
   './gdta-background.png',
+  './gdta-background-mobile.webp',
+  './gdta-background-mobile.jpg',
   './qr-gdta-2026.svg',
   './qr-gdta-guest.svg',
   './qr-sns-gdta.svg',

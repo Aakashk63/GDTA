@@ -17,8 +17,9 @@
     <meta property="og:description" content="Connect to official Wi-Fi networks at GDTA 2026 - SNS Institutions, Coimbatore.">
     <meta property="og:image" content="gdta-background.png">
 
-    <!-- Preload Optimized Background Image -->
-    <link rel="preload" as="image" href="gdta-background.webp" type="image/webp">
+    <!-- Preload Optimized Background Images -->
+    <link rel="preload" as="image" href="gdta-background.webp" type="image/webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="gdta-background-mobile.webp" type="image/webp" media="(max-width: 768px)">
 
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -525,6 +526,20 @@
         /* ==========================================
            RESPONSIVE
         =========================================== */
+        @media (max-width: 768px) {
+            body {
+                background-image:
+                    linear-gradient(rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.10)),
+                    image-set(
+                        url("gdta-background-mobile.webp") type("image/webp"),
+                        url("gdta-background-mobile.jpg") type("image/jpeg")
+                    );
+                background-attachment: scroll;
+                background-position: center top;
+                background-size: cover;
+            }
+        }
+
         @media (max-width: 700px) {
             .page {
                 padding: 30px 15px;
@@ -542,7 +557,7 @@
         @media (max-width: 500px) {
             body {
                 background-attachment: scroll;
-                background-position: center center;
+                background-position: center top;
             }
 
             .page {
