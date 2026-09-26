@@ -3,7 +3,7 @@
    High-density traffic caching for 900+ concurrent attendees
 ========================================================= */
 
-const CACHE_NAME = 'gdta-wifi-cache-v1';
+const CACHE_NAME = 'gdta-wifi-cache-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -11,11 +11,7 @@ const ASSETS_TO_CACHE = [
   './gdta-background.webp',
   './gdta-background.png',
   './gdta-background-mobile.webp',
-  './gdta-background-mobile.jpg',
-  './qr-gdta-2026.svg',
-  './qr-gdta-guest.svg',
-  './qr-sns-gdta.svg',
-  './qr-gdta-media.svg'
+  './gdta-background-mobile.jpg'
 ];
 
 // Install: Cache critical core assets

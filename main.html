@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDTA 2026 | Wi-Fi</title>
-    <meta name="description" content="GDTA 2026 Official Wi-Fi access portal - Connect to available networks at SNS Institutions, Coimbatore.">
+    <meta name="description"
+        content="GDTA 2026 Official Wi-Fi access portal - Connect to available networks at SNS Institutions, Coimbatore.">
     <meta name="theme-color" content="#e5a000">
 
     <!-- Favicon -->
@@ -14,7 +15,8 @@
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="GDTA 2026 | Wi-Fi">
-    <meta property="og:description" content="Connect to official Wi-Fi networks at GDTA 2026 - SNS Institutions, Coimbatore.">
+    <meta property="og:description"
+        content="Connect to official Wi-Fi networks at GDTA 2026 - SNS Institutions, Coimbatore.">
     <meta property="og:image" content="gdta-background.png">
 
     <!-- Preload Optimized Background Images -->
@@ -24,7 +26,9 @@
     <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* ==========================================
@@ -36,7 +40,8 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             min-height: 100%;
         }
@@ -48,10 +53,8 @@
             background-color: #14171a;
             background-image:
                 linear-gradient(rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.10)),
-                image-set(
-                    url("gdta-background.webp") type("image/webp"),
-                    url("gdta-background.png") type("image/png")
-                );
+                image-set(url("gdta-background.webp") type("image/webp"),
+                    url("gdta-background.png") type("image/png"));
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -65,12 +68,10 @@
         .background-brightness {
             position: fixed;
             inset: 0;
-            background: linear-gradient(
-                135deg,
-                rgba(255, 255, 255, 0.10),
-                rgba(255, 255, 255, 0.02),
-                rgba(255, 255, 255, 0.12)
-            );
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.10),
+                    rgba(255, 255, 255, 0.02),
+                    rgba(255, 255, 255, 0.12));
             pointer-events: none;
             z-index: 0;
         }
@@ -342,23 +343,6 @@
             border-color: #16a34a !important;
         }
 
-        /* QR button styling */
-        .action-button.btn-qr {
-            border-color: #dfdfdf;
-            color: #555555;
-            background: #ffffff;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 9px 11px;
-        }
-
-        .action-button.btn-qr:hover {
-            border-color: #111111;
-            color: #111111;
-            background: #f4f4f4;
-        }
-
         /* ==========================================
            FOOTER
         =========================================== */
@@ -407,133 +391,14 @@
         }
 
         /* ==========================================
-           QR CODE MODAL
-        =========================================== */
-        .qr-modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.65);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            z-index: 2000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.25s ease;
-        }
-
-        .qr-modal-overlay.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .qr-modal-box {
-            position: relative;
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 26px 24px;
-            width: min(340px, 100%);
-            text-align: center;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-            transform: scale(0.92);
-            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .qr-modal-overlay.open .qr-modal-box {
-            transform: scale(1);
-        }
-
-        .qr-modal-close {
-            position: absolute;
-            top: 12px;
-            right: 14px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: #888888;
-            cursor: pointer;
-            line-height: 1;
-        }
-
-        .qr-modal-close:hover {
-            color: #111111;
-        }
-
-        .qr-badge {
-            display: inline-block;
-            background: #fef3c7;
-            color: #92400e;
-            font-size: 9px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            padding: 3px 8px;
-            border-radius: 6px;
-            margin-bottom: 6px;
-        }
-
-        .qr-title {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 19px;
-            font-weight: 700;
-            color: #111111;
-        }
-
-        .qr-sub {
-            font-size: 10px;
-            color: #666666;
-            margin-top: 4px;
-            margin-bottom: 14px;
-            line-height: 1.4;
-        }
-
-        .qr-img-wrapper {
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-            background: #f9f9f9;
-            border: 1px solid #e5e5e5;
-            border-radius: 12px;
-            margin-bottom: 14px;
-        }
-
-        .qr-img-wrapper img {
-            width: 180px;
-            height: 180px;
-            display: block;
-        }
-
-        .qr-pass-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #f3f4f6;
-            border-radius: 8px;
-            padding: 6px 10px;
-            margin-top: 6px;
-        }
-
-        .qr-pass-bar code {
-            font-family: monospace;
-            font-size: 12px;
-            font-weight: 700;
-            color: #111111;
-        }
-
-        /* ==========================================
            RESPONSIVE
         =========================================== */
         @media (max-width: 768px) {
             body {
                 background-image:
                     linear-gradient(rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.10)),
-                    image-set(
-                        url("gdta-background-mobile.webp") type("image/webp"),
-                        url("gdta-background-mobile.jpg") type("image/jpeg")
-                    );
+                    image-set(url("gdta-background-mobile.webp") type("image/webp"),
+                        url("gdta-background-mobile.jpg") type("image/jpeg"));
                 background-attachment: scroll;
                 background-position: center top;
                 background-size: cover;
@@ -696,10 +561,10 @@
             <div class="panel-header">
                 <div class="wifi-logo">
                     <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Wi-Fi">
-                        <path d="M10 24C22 12 42 12 54 24" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
-                        <path d="M17 32C25 24 39 24 47 32" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
-                        <path d="M25 40C29 36 35 36 39 40" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
-                        <circle cx="32" cy="48" r="3.5" fill="#111111"/>
+                        <path d="M10 24C22 12 42 12 54 24" stroke="#111111" stroke-width="5" stroke-linecap="round" />
+                        <path d="M17 32C25 24 39 24 47 32" stroke="#111111" stroke-width="5" stroke-linecap="round" />
+                        <path d="M25 40C29 36 35 36 39 40" stroke="#111111" stroke-width="5" stroke-linecap="round" />
+                        <circle cx="32" cy="48" r="3.5" fill="#111111" />
                     </svg>
                 </div>
 
@@ -734,55 +599,15 @@
     =========================================== -->
     <div class="toast" id="toast">Wi-Fi password copied</div>
 
-    <!-- ==========================================
-         QR INSTANT CONNECT MODAL
-    =========================================== -->
-    <div class="qr-modal-overlay" id="qrModal" onclick="closeQrModal(event)">
-        <div class="qr-modal-box" onclick="event.stopPropagation()">
-            <button class="qr-modal-close" onclick="closeQrModal()" aria-label="Close">&times;</button>
-            <span class="qr-badge">Instant Camera Connect</span>
-            <div class="qr-title" id="qrModalTitle">GDTA_2026</div>
-            <div class="qr-sub">Scan this QR code with your phone's camera to join without typing the password.</div>
-
-            <div class="qr-img-wrapper">
-                <img id="qrModalImg" src="qr-gdta-2026.svg" alt="Wi-Fi QR Code">
-            </div>
-
-            <div class="qr-pass-bar">
-                <code><span id="qrModalPass">GDTA@2026</span></code>
-                <button class="action-button" id="modalCopyBtn" onclick="copyFromModal()">Copy Pass</button>
-            </div>
-        </div>
-    </div>
-
     <script>
         /* ==========================================
            WIFI NETWORK DATA
         =========================================== */
         const networks = [
             {
-                name: "GDTA_2026",
+                name: "GDTA",
                 password: "GDTA@2026",
-                signal: 4,
-                qrFile: "qr-gdta-2026.svg"
-            },
-            {
-                name: "GDTA_GUEST",
-                password: "GDTA@Guest",
-                signal: 4,
-                qrFile: "qr-gdta-guest.svg"
-            },
-            {
-                name: "SNS_GDTA",
-                password: "SNS@2026",
-                signal: 3,
-                qrFile: "qr-sns-gdta.svg"
-            },
-            {
-                name: "GDTA_MEDIA",
-                password: "Media@2026",
-                signal: 3,
-                qrFile: "qr-gdta-media.svg"
+                signal: 4
             }
         ];
 
@@ -828,20 +653,6 @@
                         aria-label="Copy password for ${network.name}"
                     >
                         Copy Pass
-                    </button>
-                    <button
-                        class="action-button btn-qr"
-                        onclick="openQrModal(${index})"
-                        aria-label="Show QR code for ${network.name}"
-                        title="Instant Camera Connect"
-                    >
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="14" width="7" height="7"></rect>
-                            <rect x="3" y="14" width="7" height="7"></rect>
-                        </svg>
-                        QR
                     </button>
                 </div>
             `;
@@ -916,42 +727,11 @@
         }
 
         /* ==========================================
-           QR CODE MODAL
-        =========================================== */
-        let activeModalIndex = 0;
-
-        function openQrModal(index) {
-            activeModalIndex = index;
-            const net = networks[index];
-            document.getElementById("qrModalTitle").textContent = net.name;
-            document.getElementById("qrModalPass").textContent = net.password;
-            document.getElementById("qrModalImg").src = net.qrFile;
-            document.getElementById("qrModal").classList.add("open");
-        }
-
-        function closeQrModal(event) {
-            if (!event || event.target.id === "qrModal" || event.target.classList.contains("qr-modal-close")) {
-                document.getElementById("qrModal").classList.remove("open");
-            }
-        }
-
-        function copyFromModal() {
-            const btn = document.getElementById("modalCopyBtn");
-            copyPassword(activeModalIndex, btn);
-        }
-
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") {
-                document.getElementById("qrModal").classList.remove("open");
-            }
-        });
-
-        /* ==========================================
            OFFLINE SERVICE WORKER (FOR 900+ USERS)
         =========================================== */
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", () => {
-                navigator.serviceWorker.register("./sw.js").catch(() => {});
+                navigator.serviceWorker.register("./sw.js").catch(() => { });
             });
         }
     </script>

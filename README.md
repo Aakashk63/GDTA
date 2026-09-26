@@ -11,7 +11,7 @@ Official high-capacity Wi-Fi access portal for **GDTA 2026** hosted at **SNS Ins
 To ensure flawless operation when 900+ users connect simultaneously in the hall, the portal incorporates a two-layer load balancing strategy:
 
 ### 1. Wi-Fi Access Point Load Balancing (Client-Side)
-- **Deterministic Device Hash Routing**: Automatically partitions attendees evenly (~225 users per AP) across 4 high-density access points (`GDTA_2026`, `GDTA_GUEST`, `SNS_GDTA`, and `GDTA_MEDIA`), preventing single-AP DHCP exhaustion or airtime collapse.
+- **Dedicated High-Density Access Point**: Connects attendees directly to the official high-capacity access point (`GDTA`), preventing DHCP exhaustion and connection drops.
 - **Dynamic Recommended AP Badge**: Each attendee is guided to their assigned optimal AP (`⭐ Recommended for your device`).
 - **Live Capacity & AP Load Metrics**: Real-time status indicators (Optimal Load, Connected Devices / Maximum AP capacity of 1,200).
 - **Instant QR Code Scan-to-Connect**: Pre-rendered vector QR codes allow iOS & Android users to point their camera and connect instantly without typing passwords or waiting in DHCP queues.
